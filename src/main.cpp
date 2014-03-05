@@ -38,7 +38,7 @@ unsigned int nTransactionsUpdated = 0;
 
 map<uint256, CBlockIndex*> mapBlockIndex;
 uint256 hashGenesisBlock("0x00000b9cf0b9bb2437283f28d378e5f9644c643f25e1c80b2cd9fdd6510d33f1");
-static const unsigned int timeGenesisBlock = 1388710861;
+static const unsigned int timeGenesisBlock = 1394010438;
 static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20);
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
@@ -1097,7 +1097,7 @@ static const int64 nTargetTimespan = 60 * 60; // 60 minutes
 static const int64 nTargetSpacing = 60; // 60 seconds
 static const int64 nInterval = nTargetTimespan / nTargetSpacing; // 20 blocks
 
-int64 static GetBlockValue(int nHeight, int64 nFees, unsigned int nBits)
+int64 static GetBlockValue(int nHeight, int64 nFees, uint256 prevHash)
 {
     int64 nSubsidy = 10000 * COIN;
 
@@ -2848,7 +2848,7 @@ CBlock(hash=00000e5e37c42d6b67d0934399adfb0fa48b59138abb1a8842c88f4ca3d4ec96, ve
 */
 
         // Genesis block
-        const char* pszTimestamp = "Putin Says No Need Yet for Russia to Send Troops to Ukraine";
+        const char* pszTimestamp = "ECB May Repeat Japan Deflation Mistake That Triggered Lost Decade";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
